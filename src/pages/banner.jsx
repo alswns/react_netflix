@@ -25,12 +25,18 @@ list-style:none;
 margin-right:10px;
 `
 const NavIcon=styled.ul`
+        display: flex;
 
 `
-const NavIconItem=styled.li``
+const NavIconItem=styled.li`
+        height: 100%;
+        width: fit-content;
+        list-style:none;
+        margin-right:3px;
+`
 const Img=styled.img`
-list-style:none;
-height:68px;
+        list-style:none;
+        height: 100%;
 `
 const Banner = props => {
 
@@ -49,7 +55,13 @@ const Banner = props => {
                         <NavIcon>
                                 <NavIconItem>
                                 <Img src="/search.svg" alt=""/>
+                                </NavIconItem>
+                                <NavIconItem>
+                                        
                                 <Img src="/gift.svg" alt=""/>
+                                </NavIconItem>
+                                <NavIconItem>
+                                        
                                 <Img src="/bell.svg" alt=""/>
                                 </NavIconItem>
                         </NavIcon>
