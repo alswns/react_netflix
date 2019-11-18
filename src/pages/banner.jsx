@@ -23,10 +23,18 @@ const NavTextItem=styled.li`
 color:white;
 list-style:none;
 margin-right:10px;
+&:active{
+        font-weight:bold;
+        color:#000;
+
+}
+&:hover{
+        color: #b3b3b3
+}; 
 `
 const NavIcon=styled.ul`
         display: flex;
-
+        
 `
 const NavIconItem=styled.li`
         height: 100%;
@@ -38,6 +46,11 @@ const Img=styled.img`
         list-style:none;
         height: 100%;
 `
+const setFont=(event)=>{
+        console.log(event.target.style)
+        event.target.style.fontWeight='bold'
+        event.target.style.color='#000'
+}
 const Banner = props => {
 
         return (
