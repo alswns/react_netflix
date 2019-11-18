@@ -23,12 +23,8 @@ const NavTextItem=styled.li`
 color:white;
 list-style:none;
 margin-right:10px;
-&:active{
-        font-weight:bold;
-        color:#000;
-
-}
 &:hover{
+        font-weight:normal;
         color: #b3b3b3
 }; 
 `
@@ -47,9 +43,14 @@ const Img=styled.img`
         height: 100%;
 `
 const setFont=(event)=>{
-        console.log(event.target.style)
+        let asd =document.getElementsByClassName('asd')
+        for(let a=0;a<asd.length;a++){
+                asd[a].style.fontWeight='normal'
+                asd[a].style.color='#e5e5e5'
+        }
         event.target.style.fontWeight='bold'
         event.target.style.color='#000'
+                
 }
 const Banner = props => {
 
@@ -59,10 +60,10 @@ const Banner = props => {
                         
                         <Logo src='https://cdn.pixelprivacy.com/wp-content/uploads/2017/12/Netflix-Logo-1024x277.png'></Logo>
                         <NavText>
-                        <NavTextItem>홈</NavTextItem>
-                        <NavTextItem>TV 프로그램</NavTextItem>
-                        <NavTextItem>최신 등록 콘텐츠</NavTextItem>
-                        <NavTextItem>내가 찜한 콘텐츠</NavTextItem>
+                        <NavTextItem className='asd' onClick={setFont}>홈</NavTextItem>
+                        <NavTextItem className='asd' onClick={setFont}>TV 프로그램</NavTextItem>
+                        <NavTextItem className='asd' onClick={setFont}>최신 등록 콘텐츠</NavTextItem>
+                        <NavTextItem className='asd' onClick={setFont}>내가 찜한 콘텐츠</NavTextItem>
                         </NavText>
 
                         <NavIcon>
