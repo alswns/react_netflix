@@ -2,11 +2,16 @@ import React from "react"
 import styled from 'styled-components'
 
 const Wrapper=styled.div`
-width:100vw;
+width:100%;
 height:68px;
 display:flex;
 padding:20px 58px;
 box-sizing:border-box;
+position:fixed;
+    top:0;
+    left:0;
+    right:0;
+z-index:9000;
 `
 
 const Logo=styled.img`
@@ -49,7 +54,7 @@ const setFont=(event)=>{
                 asd[a].style.color='#e5e5e5'
         }
         event.target.style.fontWeight='bold'
-        event.target.style.color='#000'
+        event.target.style.color='#fff'
                 
 }
 const Banner = props => {

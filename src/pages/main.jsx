@@ -1,5 +1,7 @@
 import React from "react"
-import Banner from './banner'
+import Banner from '../components/banner'
+import Preview from '../components/preview'
+import MovieContainer from '../components/MovieContainer'
 class Main extends React.Component {
     constructor(props) {
         super(props)
@@ -9,6 +11,10 @@ class Main extends React.Component {
         return (
             <>
                 <Banner></Banner>
+                <Preview/>
+                <div style={{marginTop:'45%'}}>
+                <MovieContainer/>
+                </div>
             </>
         )
     }
