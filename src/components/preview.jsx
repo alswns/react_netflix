@@ -25,7 +25,7 @@ padding:3% 5%;
 margin-right:3%;
 margin-left:3%;
 transition: 0.4s;
-
+cursor:pointer;
 
 &:hover{
     
