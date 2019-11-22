@@ -8,10 +8,12 @@ margin-bottom:5%;
 color:white;
 margin: 0 auto;
 width: calc(100% - (${BtnSize} + ${BtnSize}));
+
 .title{
     font-weight:bold;
 }
 .container{
+    
     position:relative;
 }
 .slider{
@@ -60,14 +62,14 @@ const MovieContainer = props => {
         }
     }
     const onClickRight = () => {
-        if(page<props.movie.length/5){
+        if (page < props.movie.length / 5) {
             setPage(page + 1);
         }
-        
+
     }
 
     return (
-        <Wrapper translate={(page - 1) * (sliderWidth)}>
+        <Wrapper translate={(page - 1) * (sliderWidth+17)}>
             <div className="title">
                 {props.title}
             </div>
@@ -76,7 +78,7 @@ const MovieContainer = props => {
                 <BtnRight onClick={onClickRight}> {'>'}</BtnRight>
                 <div className="slider" ref={slider}>
                     {props.movie.map(value => {
-                        return <Movieitem title={value} />
+                        return <Movieitem datas={value} />
                     })
                     }
                 </div>

@@ -19,19 +19,37 @@ const Wrapper=styled.div`
         display:flex;
         justify-content:center;
         align-items:center;
+        background:none;
+        color:#fff;
+    }
+    &>img{
+        width:100%;
+        height:100%;
+        position:absolute;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
 
     }
     &:hover{
-        transform:scale(1.5);
-
+        transform:scale(1.15);
+        z-index:100;
+        
     }
 `
 // const a=styled.button``
 
 const Movieitem =props =>{
+    const path="http://image.tmdb.org/t/p/w185" + props.datas.backdrop_path
+    
     return(
         <Wrapper>
-            <div>{props.title}</div>
+                <img src={path} alt=""/>
+                <div>{props.datas.title}</div>
         </Wrapper>
     )
 }

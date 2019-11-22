@@ -1,9 +1,9 @@
 import React from "react"
+import withLayout from "../components/witLayout"
 import Preview from '../components/preview'
 import MovieContainer from '../components/MovieContainer'
 import Axios from "axios"
-import withLayout from "../components/witLayout"
-class Main extends React.Component {
+class Tv extends React.Component {
     constructor(props) {
         super(props)
         this.state={
@@ -37,7 +37,7 @@ class Main extends React.Component {
     render() {
         return (
             <>
-              
+                
                 <Preview data={this.state.data}/>
                 <div style={{marginTop:'50%',overflowX:"hidden",overflowY:"hidden"}}>
                 <MovieContainer title={'인기있는'} movie={this.state.pop_movies}/>
@@ -48,4 +48,4 @@ class Main extends React.Component {
         )
     }
 }
-export default withLayout(Main)
+export default withLayout(Tv)
