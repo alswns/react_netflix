@@ -4,6 +4,8 @@ import { BrowserRouter as Router,Route,Switch } from 'react-router-dom'
 import { createGlobalStyle } from 'styled-components'
 import Tv from'./pages/Tv'
 import Banner from './components/banner'
+import New from './pages/New'
+
 const GlobalStyle = createGlobalStyle`
   *{
     margin:0;
@@ -37,6 +39,12 @@ const App = () => {
           <Route path='/test' exact>
           
             <div style={{color:'white'}}  > test</div>
+          </Route>
+          <Route path='/new' exact>
+          <New/>
+          </Route>
+          <Route path='/favorite' exact>
+            
           </Route>
         </Router>
 

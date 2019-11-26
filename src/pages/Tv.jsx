@@ -39,7 +39,7 @@ class Tv extends React.Component {
             <>
                 
                 <Preview data={this.state.data}/>
-                <div style={{marginTop:'50%',overflowX:"hidden",overflowY:"hidden"}}>
+                <div style={{marginTop:'45%',overflowX:"hidden",overflowY:"hidden"}}>
                 <MovieContainer title={'인기있는'} movie={this.state.pop_movies}/>
                 <MovieContainer title={'트렌드'} movie={this.state.trend_moivies}/>
                 

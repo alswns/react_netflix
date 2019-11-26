@@ -69,8 +69,8 @@ const Banner = props => {
                         <NavText>
                         <NavTextItem className='asd' onClick={setFont}><Link to="/">홈</Link></NavTextItem>
                         <NavTextItem className='asd' onClick={setFont}><Link to="/tv">TV 프로그램</Link></NavTextItem>
-                        <NavTextItem className='asd' onClick={setFont}>최신 등록 콘텐츠</NavTextItem>
-                        <NavTextItem className='asd' onClick={setFont}>내가 찜한 콘텐츠</NavTextItem>
+                        <NavTextItem className='asd' onClick={setFont}><Link to='/new'>최신 등록 콘텐츠</Link></NavTextItem>
+                        <NavTextItem className='asd' onClick={setFont}><Link to='/favorite'>내가 찜한 콘텐츠</Link></NavTextItem>
                         </NavText>
 
                         <NavIcon>
